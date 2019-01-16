@@ -9,7 +9,7 @@ namespace WDS_MiniGamesHub.Persistence.Mssql.Infrastructure
     public abstract class DesignTimeDbContextFactoryBase<TContext> :
             IDesignTimeDbContextFactory<TContext> where TContext : DbContext
     {
-        private const string ConnectionStringName = "MSSQLConnection";
+        private const string ConnectionStringName = "MSSQLConnectionMigration";
         private const string AspNetCoreEnvironment = "ASPNETCORE_ENVIRONMENT";
 
         public TContext CreateDbContext(string[] args)
@@ -40,8 +40,8 @@ namespace WDS_MiniGamesHub.Persistence.Mssql.Infrastructure
         {
             if (string.IsNullOrEmpty(connectionString))
             {
-                connectionString = "Server=127.0.0.1;Initial Catalog=wds-minigameshub;MultipleActiveResultSets=true;User ID=sa;Password=T3st!Th1sSh1t!";
-                //throw new ArgumentException($"Connection string '{ConnectionStringName}' is null or empty.", nameof(connectionString));
+                //connectionString = "Server=127.0.0.1;Initial Catalog=wds-minigameshub;MultipleActiveResultSets=true;User ID=sa;Password=T3st!Th1sSh1t!";
+                throw new ArgumentException($"Connection string '{ConnectionStringName}' is null or empty.", nameof(connectionString));
             }
 
             Console.WriteLine($"DesignTimeDbContextFactoryBase.Create(string): Connection string: '{connectionString}'.");

@@ -13,6 +13,7 @@ namespace WDS_MiniGamesHub.Persistence.Mssql.Configurations
         {
             builder.Property(e => e.Id).UseSqlServerIdentityColumn();
             builder.Property(e => e.Email).HasMaxLength(500);
+            builder.Property(e => e.Created).HasDefaultValue(DateTime.Now);
         }
     }
 }
