@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using WDS_MiniGamesHub.Core.User.Models;
-using WDS_MiniGamesHub.Persistence.Mysql;
+using WDS_MiniGamesHub.Persistence.Mssql;
 
 namespace WDS_MiniGamesHub.Core.User.Queries
 {

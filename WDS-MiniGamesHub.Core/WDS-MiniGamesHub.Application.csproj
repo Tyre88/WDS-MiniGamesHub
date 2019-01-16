@@ -14,7 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WDS-MiniGamesHub.Domain\WDS-MiniGamesHub.Domain.csproj" />
-    <ProjectReference Include="..\WDS-MiniGamesHub.Persistence\WDS-MiniGamesHub.Persistence.Mysql.csproj" />
+    <ProjectReference Include="..\WDS-MiniGamesHub.Persistence.Mssql\WDS-MiniGamesHub.Persistence.Mssql.csproj" />
   </ItemGroup>
 
 </Project>

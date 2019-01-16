@@ -17,7 +17,7 @@ using FluentValidation.AspNetCore;
 using WDS_MiniGamesHub.Core.Infrastructure.AutoMapper;
 using WDS_MiniGamesHub.Core.User.Queries;
 using AutoMapper;
-using WDS_MiniGamesHub.Persistence.Mysql;
+using WDS_MiniGamesHub.Persistence.Mssql;
 using Microsoft.EntityFrameworkCore;
 
 namespace WDS_MiniGamesHub.Web
@@ -59,7 +59,8 @@ namespace WDS_MiniGamesHub.Web
                 };
             });
 
-            services.AddDbContext<WDSMiniGamesHubDbContext>(options => options.UseMySql("server=127.0.0.1;port=3306;database=142212-wds-minigameshub;uid=142212_gg94104;password=***"));
+            //services.AddDbContext<WDSMiniGamesHubDbContext>(options => options.UseMySql("server=127.0.0.1;port=3306;database=142212-wds-minigameshub;uid=142212_gg94104;password=***"));
+            services.AddDbContext<WDSMiniGamesHubDbContext>(options => options.UseSqlServer("Server=127.0.0.1;Initial Catalog=wds-minigameshub;MultipleActiveResultSets=true;User ID=sa;Password=T3st!Th1sSh1t!"));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1).AddFluentValidation();
         }
