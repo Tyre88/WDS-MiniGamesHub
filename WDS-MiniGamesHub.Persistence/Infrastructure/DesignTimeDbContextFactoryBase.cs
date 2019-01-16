@@ -4,7 +4,7 @@ using Microsoft.Extensions.Configuration;
 using System;
 using System.IO;
 
-namespace WDS_MiniGamesHub.Persistence.Infrastructure
+namespace WDS_MiniGamesHub.Persistence.Mysql.Infrastructure
 {
     public abstract class DesignTimeDbContextFactoryBase<TContext> :
             IDesignTimeDbContextFactory<TContext> where TContext : DbContext

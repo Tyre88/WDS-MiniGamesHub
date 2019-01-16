@@ -17,7 +17,7 @@ using FluentValidation.AspNetCore;
 using WDS_MiniGamesHub.Core.Infrastructure.AutoMapper;
 using WDS_MiniGamesHub.Core.User.Queries;
 using AutoMapper;
-using WDS_MiniGamesHub.Persistence;
+using WDS_MiniGamesHub.Persistence.Mysql;
 using Microsoft.EntityFrameworkCore;
 
 namespace WDS_MiniGamesHub.Web

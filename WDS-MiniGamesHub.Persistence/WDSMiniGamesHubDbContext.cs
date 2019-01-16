@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using WDS_MiniGamesHub.Domain.Entities;
 
-namespace WDS_MiniGamesHub.Persistence
+namespace WDS_MiniGamesHub.Persistence.Mysql
 {
     public class WDSMiniGamesHubDbContext : DbContext
     {

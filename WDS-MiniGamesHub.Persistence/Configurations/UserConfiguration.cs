@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using WDS_MiniGamesHub.Domain.Entities;
 
-namespace WDS_MiniGamesHub.Persistence.Configurations
+namespace WDS_MiniGamesHub.Persistence.Mysql.Configurations
 {
     public class UserConfiguration : IEntityTypeConfiguration<User>
     {

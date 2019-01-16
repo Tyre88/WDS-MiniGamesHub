@@ -1,0 +1,19 @@
+FROM microsoft/dotnet:2.1-aspnetcore-runtime AS base
+WORKDIR /app
+EXPOSE 80
+
+FROM microsoft/dotnet:2.1-sdk AS build
+WORKDIR /src
+COPY ["WDS-MiniGamesHub.Web/WDS-MiniGamesHub.Web.csproj", "WDS-MiniGamesHub.Web/"]
+RUN dotnet restore "WDS-MiniGamesHub.Web/WDS-MiniGamesHub.Web.csproj"
+COPY . .
+WORKDIR "/src/WDS-MiniGamesHub.Web"
+RUN dotnet build "WDS-MiniGamesHub.Web.csproj" -c Release -o /app
+
+FROM build AS publish
+RUN dotnet publish "WDS-MiniGamesHub.Web.csproj" -c Release -o /app
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app .
+ENTRYPOINT ["dotnet", "WDS-MiniGamesHub.Web.dll"]

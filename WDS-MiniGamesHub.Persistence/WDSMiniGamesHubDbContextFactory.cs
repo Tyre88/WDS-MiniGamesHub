@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
-using WDS_MiniGamesHub.Persistence.Infrastructure;
+using WDS_MiniGamesHub.Persistence.Mysql.Infrastructure;
 
-namespace WDS_MiniGamesHub.Persistence
+namespace WDS_MiniGamesHub.Persistence.Mysql
 {
     public class WDSMiniGamesHubDbContextFactory : DesignTimeDbContextFactoryBase<WDSMiniGamesHubDbContext>
     {
