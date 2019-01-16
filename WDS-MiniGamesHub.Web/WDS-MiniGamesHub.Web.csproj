@@ -23,6 +23,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WDS-MiniGamesHub.Core\WDS-MiniGamesHub.Core.csproj" />
+    <ProjectReference Include="..\WDS-MiniGamesHub.Persistence\WDS-MiniGamesHub.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

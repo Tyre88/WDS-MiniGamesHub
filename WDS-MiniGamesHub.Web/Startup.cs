@@ -17,6 +17,8 @@ using FluentValidation.AspNetCore;
 using WDS_MiniGamesHub.Core.Infrastructure.AutoMapper;
 using WDS_MiniGamesHub.Core.User.Queries;
 using AutoMapper;
+using WDS_MiniGamesHub.Persistence;
+using Microsoft.EntityFrameworkCore;
 
 namespace WDS_MiniGamesHub.Web
 {
@@ -40,7 +42,24 @@ namespace WDS_MiniGamesHub.Web
             //services.AddMediatR(typeof(GetUserQueryHandler).GetTypeInfo().Assembly);
             services.AddMediatR();
 
-            services.AddSwaggerDocument();
+            services.AddSwaggerDocument(config =>
+            {
+                config.PostProcess = document =>
+                {
+                    document.Info.Version = "v1";
+                    document.Info.Title = "WDS MiniGames API";
+                    document.Info.Description = "";
+                    document.Info.TermsOfService = "None";
+                    document.Info.Contact = new NSwag.SwaggerContact
+                    {
+                        Name = "Victor Öhrström",
+                        Email = string.Empty,
+                        Url = "https://gradera.nu"
+                    };
+                };
+            });
+
+            services.AddDbContext<WDSMiniGamesHubDbContext>(options => options.UseMySql("server=127.0.0.1;port=3306;database=142212-wds-minigameshub;uid=142212_gg94104;password=***"));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1).AddFluentValidation();
         }

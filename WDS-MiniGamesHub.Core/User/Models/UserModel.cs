@@ -14,15 +14,23 @@ namespace WDS_MiniGamesHub.Core.User.Models
         public string LastName { get; set; }
         public string Email { get; set; }
 
-        public static Expression<Func<UserModel, UserModel>> Projection
+        public static Expression<Func<Entities.User, UserModel>> Projection
         {
             get
             {
-                return user => user;
+                return user => new UserModel()
+                {
+                    Email = user.Email,
+                    FirstName = user.FirstName,
+                    Id = user.Id,
+                    LastName = user.LastName,
+                    Password = user.Password,
+                    UserName = user.UserName
+                };
             }
         }
 
-        public static UserModel Create(UserModel user)
+        public static UserModel Create(Entities.User user)
         {
             return Projection.Compile().Invoke(user);
         }

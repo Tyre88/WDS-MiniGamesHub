@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WDS-MiniGamesHub.Web", "WDS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WDS-MiniGamesHub.Core", "WDS-MiniGamesHub.Core\WDS-MiniGamesHub.Core.csproj", "{845F00D8-B269-4469-9F6E-39CBB34EFE9C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WDS-MiniGamesHub.Persistence", "WDS-MiniGamesHub.Persistence\WDS-MiniGamesHub.Persistence.csproj", "{0CCF1AFF-C696-4B82-AE6B-E04351A08AA1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{845F00D8-B269-4469-9F6E-39CBB34EFE9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{845F00D8-B269-4469-9F6E-39CBB34EFE9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{845F00D8-B269-4469-9F6E-39CBB34EFE9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CCF1AFF-C696-4B82-AE6B-E04351A08AA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CCF1AFF-C696-4B82-AE6B-E04351A08AA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CCF1AFF-C696-4B82-AE6B-E04351A08AA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CCF1AFF-C696-4B82-AE6B-E04351A08AA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
