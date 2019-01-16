@@ -9,7 +9,6 @@ using Microsoft.Extensions.DependencyInjection;
 namespace WDS_MiniGamesHub.Web.Controllers
 {
     [ApiController]
-    [Route("api/[controller]/[action]")]
     public abstract class BaseController : Controller
     {
         private IMediator _mediator;

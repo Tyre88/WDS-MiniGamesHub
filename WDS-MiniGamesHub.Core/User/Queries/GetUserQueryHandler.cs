@@ -14,11 +14,11 @@ namespace WDS_MiniGamesHub.Core.User.Queries
         {
             return new UserModel
             {
-                Id = 1,
+                Id = request.Id,
                 Email = "victor@gradera.nu",
                 FirstName = "Victor",
                 LastName = "Öhrström",
-                UserName = "victor"
+                UserName = request.UserName ?? "victor"
             };
         }
     }

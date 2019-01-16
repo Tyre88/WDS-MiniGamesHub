@@ -9,5 +9,6 @@ namespace WDS_MiniGamesHub.Core.User.Queries
     public class GetUserQuery : IRequest<UserModel>
     {
         public int Id { get; set; }
+        public string UserName { get; set; }
     }
 }

@@ -9,14 +9,21 @@ using WDS_MiniGamesHub.Core.User.Queries;
 
 namespace WDS_MiniGamesHub.Web.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
     public class UserController : BaseController
     {
         [HttpGet]
-        public async Task<ActionResult<UserModel>> GetUser()
+        [Route("api/user/getuser/{id:int=-1}")]
+        public async Task<ActionResult<UserModel>> GetUser(int id)
         {
-            return Ok(await Mediator.Send(new GetUserQuery()));
+            return Ok(await Mediator.Send(new GetUserQuery() { Id = id }));
+        }
+
+        [HttpGet]
+        [Route("api/user/getuser/{userName}")]
+        public async Task<ActionResult<UserModel>> GetUser(string userName)
+        {
+            return Ok(await Mediator.Send(new GetUserQuery() { UserName = userName }));
         }
     }
 }
