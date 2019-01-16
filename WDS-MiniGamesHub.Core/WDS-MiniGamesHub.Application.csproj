@@ -12,4 +12,9 @@
     <PackageReference Include="Microsoft.Extensions.Logging" Version="2.1.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WDS-MiniGamesHub.Domain\WDS-MiniGamesHub.Domain.csproj" />
+    <ProjectReference Include="..\WDS-MiniGamesHub.Persistence\WDS-MiniGamesHub.Persistence.csproj" />
+  </ItemGroup>
+
 </Project>

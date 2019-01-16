@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using WDS_MiniGamesHub.Core.Entities;
+using WDS_MiniGamesHub.Domain.Entities;
 
 namespace WDS_MiniGamesHub.Persistence.Configurations
 {

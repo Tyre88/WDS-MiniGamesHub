@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace WDS_MiniGamesHub.Core.Entities
+namespace WDS_MiniGamesHub.Domain.Entities
 {
     public class User
     {

@@ -14,7 +14,7 @@ namespace WDS_MiniGamesHub.Core.User.Models
         public string LastName { get; set; }
         public string Email { get; set; }
 
-        public static Expression<Func<Entities.User, UserModel>> Projection
+        public static Expression<Func<Domain.Entities.User, UserModel>> Projection
         {
             get
             {
@@ -30,7 +30,7 @@ namespace WDS_MiniGamesHub.Core.User.Models
             }
         }
 
-        public static UserModel Create(Entities.User user)
+        public static UserModel Create(Domain.Entities.User user)
         {
             return Projection.Compile().Invoke(user);
         }

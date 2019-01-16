@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WDS-MiniGamesHub.Core\WDS-MiniGamesHub.Core.csproj" />
+    <ProjectReference Include="..\WDS-MiniGamesHub.Domain\WDS-MiniGamesHub.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
