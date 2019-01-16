@@ -40,6 +40,8 @@ namespace WDS_MiniGamesHub.Web
             //services.AddMediatR(typeof(GetUserQueryHandler).GetTypeInfo().Assembly);
             services.AddMediatR();
 
+            services.AddSwaggerDocument();
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1).AddFluentValidation();
         }
 
@@ -50,6 +52,9 @@ namespace WDS_MiniGamesHub.Web
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseSwagger();
+            app.UseSwaggerUi3();
 
             app.UseMvc();
         }

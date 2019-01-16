@@ -13,8 +13,8 @@ namespace WDS_MiniGamesHub.Web.Controllers
     public class UserController : BaseController
     {
         [HttpGet]
-        [Route("api/user/getuser/{id:int=-1}")]
-        public async Task<ActionResult<UserModel>> GetUser(int id)
+        [Route("api/user/getuser/{id:int?}")]
+        public async Task<ActionResult<UserModel>> GetUser(int id = -1)
         {
             return Ok(await Mediator.Send(new GetUserQuery() { Id = id }));
         }
