@@ -12,7 +12,7 @@ services:
       - SA_PASSWORD=T3st!Th1sSh1t!
 
   wds-minigameshub.web:
-    image: ${DOCKER_REGISTRY-}wdsminigameshubweb
+    image: wdsminigameshubweb:test
     container_name: wdsminigameshubwebapi
     depends_on:
       - sqlserver

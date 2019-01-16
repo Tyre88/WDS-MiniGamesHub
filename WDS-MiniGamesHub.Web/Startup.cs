@@ -60,7 +60,7 @@ namespace WDS_MiniGamesHub.Web
             });
 
             //services.AddDbContext<WDSMiniGamesHubDbContext>(options => options.UseMySql("server=127.0.0.1;port=3306;database=142212-wds-minigameshub;uid=142212_gg94104;password=***"));
-            services.AddDbContext<WDSMiniGamesHubDbContext>(options => options.UseSqlServer("Server=127.0.0.1;Initial Catalog=wds-minigameshub;MultipleActiveResultSets=true;User ID=sa;Password=T3st!Th1sSh1t!"));
+            services.AddDbContext<WDSMiniGamesHubDbContext>(options => options.UseSqlServer("Server=sqlserver;Initial Catalog=wds-minigameshub;MultipleActiveResultSets=true;User ID=sa;Password=T3st!Th1sSh1t!"));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1).AddFluentValidation();
         }
