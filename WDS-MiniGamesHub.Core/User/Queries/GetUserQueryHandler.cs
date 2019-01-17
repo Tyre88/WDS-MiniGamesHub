@@ -6,6 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using WDS_MiniGamesHub.Core.User.Models;
 using WDS_MiniGamesHub.Persistence.Mssql;
+using System.Linq;
 
 namespace WDS_MiniGamesHub.Core.User.Queries
 {
@@ -27,7 +28,8 @@ namespace WDS_MiniGamesHub.Core.User.Queries
             }
             else if(!string.IsNullOrEmpty(request.UserName))
             {
-                entity = await _context.Users.FindAsync(request.UserName);
+                
+                entity = _context.Users.Where(u => u.UserName == request.UserName).FirstOrDefault();
             }
 
 
