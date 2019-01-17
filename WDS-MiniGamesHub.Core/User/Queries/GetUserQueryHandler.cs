@@ -28,7 +28,6 @@ namespace WDS_MiniGamesHub.Core.User.Queries
             }
             else if(!string.IsNullOrEmpty(request.UserName))
             {
-                
                 entity = _context.Users.Where(u => u.UserName == request.UserName).FirstOrDefault();
             }
 

@@ -13,12 +13,6 @@ namespace WDS_MiniGamesHub.Web.Controllers
     [ApiController]
     public class MigrateController : BaseController
     {
-        private readonly WDSMiniGamesHubDbContext _context;
-        public MigrateController(WDSMiniGamesHubDbContext context)
-        {
-            _context = context;
-        }
-
         [Route("api/migrate/migrate")]
         public async Task<ActionResult<bool>> IsDatabaseCreated()
         {
