@@ -9,12 +9,17 @@
     <PackageReference Include="AutoMapper" Version="8.0.0" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="8.1.2" />
     <PackageReference Include="MediatR" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.4" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="2.1.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\WDS-MiniGamesHub.Domain\WDS-MiniGamesHub.Domain.csproj" />
     <ProjectReference Include="..\WDS-MiniGamesHub.Persistence.Mssql\WDS-MiniGamesHub.Persistence.Mssql.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\Models\" />
   </ItemGroup>
 
 </Project>
